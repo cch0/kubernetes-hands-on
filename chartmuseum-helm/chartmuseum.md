@@ -50,3 +50,7 @@ helm repo add {{helm-repo-name}} http://{{service-ip}
 ```
 helm push /path/to/your/chart {{helm-repo-name}} --version={{version-number}}
 ```
+
+## Be Aware!!!
+
+*  Default reclaim policy for dynamically provisioned volumes is “delete”. You will need to edit PVC object to change the __persistentVolumeReclaimPolicy__ to __Retain__
