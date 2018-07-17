@@ -31,7 +31,7 @@ Helm chart provided at Kubernetes github repository [ChartMuseum Helm Chart](htt
 ## Install ChartMuseum
 
 ```
-helm install --name {{release-name}}  --set env.open.STORAGE_GOOGLE_BUCKET={{cloud-storage-bucket-name}  .
+helm install --name {{release-name}}  --set env.open.STORAGE_GOOGLE_BUCKET={{cloud-storage-bucket-name}}  .
 ```
 
 ## Post Install Configuration
