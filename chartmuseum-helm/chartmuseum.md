@@ -53,4 +53,19 @@ helm push /path/to/your/chart {{helm-repo-name}} --version={{version-number}}
 
 ## Be Aware!!!
 
-*  Default reclaim policy for dynamically provisioned volumes is “delete”. You will need to edit PVC object to change the __persistentVolumeReclaimPolicy__ to __Retain__
+*  The PVC resource is expecting a StorageClass nased __regional-sc__ exists already.
+
+   ```
+kind: StorageClass
+apiVersion: storage.k8s.io/v1
+metadata:
+  name: regional-sc
+provisioner: kubernetes.io/gce-pd
+reclaimPolicy: Retain
+parameters:
+  type: pd-standard
+  zones: us-west1-a, us-west1-b
+  replication-type: regional-pd
+  reclaimPolicy: Retain
+   ```
+
