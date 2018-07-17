@@ -4,6 +4,11 @@
 
 Helm chart provided at Kubernetes github repository [ChartMuseum Helm Chart](https://github.com/kubernetes/charts/tree/master/stable/chartmuseum) can be used to install ChartMuseum.
 
+## Cloud Storage Bucket
+
+* Create a bucket with name of chosen and this will be the value for {{cloud-storage-bucket-name})
+
+
 ## Configuration
 
 * Default values defined in __values.yaml__ file have been overridden to provide persistence in GCP, access to Cloud Storage bucket, etc.
